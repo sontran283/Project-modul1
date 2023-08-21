@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="container_header">
+            <div class="logo">
+                <img style="width: 50px;"
+                    src="../user/image/kisspng-logo-design-vector-graphics-clip-art-fruit-5c6ff8e73cfdb5.1577541615508420872498.png"
+                    alt="">
+                <span style="font-size:30px; color: chartreuse;">COGO</span>&emsp;
+                <button>
+                    <a style="text-decoration: none; padding: 5px; background-color: chartreuse; border-radius: 5px; color: black;"
+                        href="../user/userindex.html">Home
+                    </a>
+                </button>
+            </div>
+
+            <div class="header-right">
+                <div class="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="product_count">0</span>
+                </div>
+
+                <div class="account">
+                    <div class="account-info">
+                        <span id="user_name"></span>
+                        <img src="../user/image/tải xuống (4).jpg" alt="avatar" id="avatar">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="checkout">
+            <div class="container">
+                <div class="cart-container">
+                    <div class="Search">
+                        <button>
+                            <a style="text-decoration: none; color: white;" href="../user/userindex.html">
+                                Tiếp tục mua hàng</a>
+                        </button>
+                    </div>
+
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Đơn giá</th>
+                                <th>Số lượng</th>
+                                <th>Tổng giá</th>
+                                <th colspan="2">Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody class="cart-items" id="table_body">
+                            <!-- <tr>
+                                <td>1</td>
+                                <td>#L001</td>
+                                <td>Sản phẩm 1</td>
+                                <td>12$</td>
+                                <td>2</td>
+                                <td>24$</td>
+                                <td><button>Xóa</button></td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                    <div style="text-align: center;">
+                        <p style="font-weight: bold;">Tổng tiền: <span style="color:red"
+                                id="total_all">0</span><sup>$</sup></p>
+                    </div>
+                </div>
+
+                <div id="question" style="display: none;">
+                    <span>Số lượng: </span>
+                    <input type="number" min="1" id="editCount">
+                    <button onclick="onUpdate()" type="button">Update</button>
+                    <button onclick="onCancel()" type="button">Cancel</button>
+                </div>
+
+                <div id="confirm_order">
+                    <textarea name="" id="note" rows="1" cols="10" placeholder="Ghi chú..."></textarea>
+                    <button id="btn_buy" onclick="CheckOut()">Check Out</button>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <footer>
+        <p style="text-align: center; margin: 30px 0;">&copy; 2023 COGO Shop</p>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

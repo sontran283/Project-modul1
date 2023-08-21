@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #3ee847;
+}
+
+header {
+    padding: 20px;
+}
+
+header button {
+    background-color: #45a049;
+}
+
+button {
+    width: 80px;
+    height: 30px;
+    background-color: #3ee847;
+    border-radius: 5px;
+}
+
+.abc {
+    background-color: #16de1dd1;
+}
+
+header h1 {
+    color: #333;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.fruit-card {
+    width: 300px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.fruit-card img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.fruit-card h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.fruit-card p {
+    color: #666;
+}
+
+.fruit-card button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.fruit-card button:hover {
+    background-color: #45a049;
+}

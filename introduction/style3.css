@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(112, 197, 26);
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button {
+    width: 80px;
+    height: 30px;
+    background-color: #1eac25;
+    border-radius: 5px;
+}

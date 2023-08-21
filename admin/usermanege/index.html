@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User management</title>
+
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../product/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <a href="../adminpage/index.html">Come Back</a>
+        </div><br>
+        <div class="container">
+            <h1>Quản Lý Người Dùng</h1>
+            <hr>
+            <div class="search_add_scope">
+                <div>
+                    <button class="btn btn_them" onclick="toggleForm()">Thêm mới</button>
+                    <button style="background-color: orange;" class="btn btn_them" onclick="alphab()">anpha b</button>
+                </div>
+                <div>
+                    <input id="search" type="text" placeholder="Search by name...">
+                    <button type="button" onclick="checkSearch()">search</button>
+                </div>
+            </div><br>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Tên đăng nhập</th>
+                        <th>Email</th>
+                        <th>Mật khẩu</th>
+                        <th>Vai trò</th>
+                        <th>Thời gian tạo</th>
+                        <th>Thời gian cập nhật</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="table_body">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>san pham 1</td>
+                        <td>a@gmail.com</td>
+                        <td>Nguyen van A</td>
+                        <td>Quan tri vien</td>
+                        <td>28/06/2023</td>
+                        <td>23/04/2023</td>
+                        <td>
+                            <div class="action_col">
+                                <button class="btn btn_sua">Sửa</button>
+                                <button class="btn btn_xoa">Xóa</button>
+                            </div>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <div id="form_scope" class="hide">
+                <form action="" id="form">
+                    <h3>Thông tin người dùng</h3>
+                    <div>
+                        <label for="name">Tên đăng nhập:</label>
+                        <input id="name" type="text" placeholder="">
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="count" id="email" placeholder="">
+                    </div>
+                    <div>
+                        <label for="honame">Mật khẩu:</label>
+                        <input type="text" name="" id="honame">
+                    </div>
+                    <div>
+                        <label for="">Vai trò:</label>
+                        <select id="phanloai">
+                            <option value="khach hang">Khách hàng</option>
+                            <option value="quan tri vien">Quản trị viên</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="time">Thời gian tạo:</label>
+                        <input type="time" name="" id="time" value="time">
+                    </div>
+                    <div>
+                        <label for="datetime">Thời gian cập nhật:</label>
+                        <input type="datetime-local" name="" id="datetime" value="datetime">
+                    </div>
+                    <div class="btn_them_spoce">
+                        <button class="btn btn_xoa" type="button" onclick="toggleForm()">Hủy</button>
+                        <button class="btn btn_them" type="submit">Lưu</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <nav aria-label="Page navigation example">
+            <ul id="pagination" class="pagination float-end mx-4">
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+            </ul>
+        </nav>
+    </header><br>
+
+    <footer>
+        <p style="text-align: center;;">&copy; 2023 COGO Shop</p>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

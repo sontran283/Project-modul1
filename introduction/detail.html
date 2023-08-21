@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product details</title>
+
+    <link rel="stylesheet" href="./productdetails.css">
+</head>
+
+<body>
+    <header>
+        <div class="Home">
+            <h1>COGO Product Details</h1>
+            <button class="button"><a style="text-decoration: none; " href="../user/userindex.html">Home</a></button>
+        </div>
+
+        <div class="container">
+            <div class="product-image">
+                <img id="image" src="" alt="Orange">
+            </div>
+            <div class="product-details">
+                <h2 id="name"></h2>
+                <p id="price" style="color: red;">Price: <span id="price"></span>$</p>
+                <p><strong>Mã sản phẩm:</strong> <span id="maSP"></span></p>
+                <button class="add-to-cart" onclick="addToCart()">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+    </header>
+
+    <footer>
+        <p style="text-align: center;;">&copy; 2023 COGO Shop</p>
+    </footer>
+
+    <script src="./detail.js"></script>
+</body>
+
+</html>

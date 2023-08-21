@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COGO Customer Management</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="container_header">
+            <div class="logo">
+                <div>
+                    <span><a href="./index.html"><img src="../image/logoage.png" alt="COGO"></a></span>
+                </div>
+                <div>
+                    <h3>COGO</h3>
+                </div>
+            </div>
+            <div>
+                <h2>Customer Management</h2>
+            </div>
+            <div class="account">
+                <button style="background-color: rgb(17, 156, 17); width: 80px; height: 30px; border-radius: 5px;">
+                    <span style="text-decoration: none; color: white;" onclick="signOut()">Exit
+                    </span>
+                    <span><i class="fa-solid fa-right-from-bracket"></i></span></button>
+            </div>
+        </div>
+
+        <section class="category">
+            <div class="container">
+                <a href=""></a>
+                <div class="redirect">
+                    <button class="btn_redirect" onclick="window.location.href = '../order/index.html'">Quản lý đơn
+                        hàng</button>
+                    <button class="btn_redirect" onclick="window.location.href = '../product/index.html'">Quản lý sản
+                        phẩm</button>
+                    <button class="btn_redirect" onclick="window.location.href = '../usermanege/index.html'">Quản lý
+                        người dùng</button>
+                </div>
+                <ul class="category-list">
+                    <li><a>Cherry</a></li>
+                    <li><a>Apple</a></li>
+                    <li><a>Mango</a></li>
+                    <li><a>Orange</a></li>
+                    <li><a>Berry</a></li>
+                    <li><a>Durian</a></li>
+                    <li><a>Grape</a></li>
+                    <li><a>Peach</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="container">
+            <h1>Cửa hàng hoa quả tươi nhất Vịnh Bắc Bộ</h1>
+            <div class="fruit-card">
+                <img src="../image/hinh-nen-hoa-qua-cho-may-tinh-28.jpg" alt="Hoa quả">
+            </div>
+    </header>
+
+    <footer>
+        <p style="text-align: center; margin: 30px 0;">&copy; 2023 COGO Shop</p>
+    </footer>
+
+    <script src="admin_page.js"></script>
+</body>
+
+</html>

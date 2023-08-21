@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo1">
+                <img class="image1" src="../image/logoage.png" alt="">
+                <p class="logoName">CoGo</p>
+            </div>
+            <div class="button1">
+                <button>Hello</button>
+                <button>Introduce</button>
+                <button>Product</button>
+            </div>
+        </div>
+
+        <form>
+            <h3>LOGIN</h3>
+            <div class="mb-3">
+                <label for="username" class="form-label">User Name</label>
+                <input id="username" type="email" class="form-control" aria-describedby="usernameError">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input id="password" type="password" class="form-control">
+                <div id="error" class="form-text text-danger"></div>
+            </div>
+            <button type="button" onclick="handleLogin()" class="btn btn-primary">
+                Login
+            </button><br>
+            <button type="button" class="RegisterButton"><a style="text-decoration: none; color: white;"
+                    href="../register/register.html">
+                    Register</a>
+            </button>
+
+        </form>
+    </header>
+
+    <footer>
+        <p style="text-align: center; color: white; font-weight: bold;">&copy; 2023 COGO Shop</p>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

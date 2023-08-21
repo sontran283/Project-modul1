@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../product/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <a href="../adminpage/index.html">Come Back</a>
+        </div><br>
+
+        <div class="container">
+            <h1>Quản Lý Đơn Hàng</h1>
+            <hr><br>
+            <!-- <div class="search_add_scope">
+                <div>
+                    <button class="btn btn_them" onclick="toggleForm()">Thêm mới</button>
+                    <button style="background-color: orange;" class="btn btn_them" onclick="alphab()">anpha b</button>
+                </div>
+                <div>
+                    <input id="search" type="text" placeholder="Search by name...">
+                    <button type="button" onclick="checkSearch()">search</button>
+                </div>
+            </div> -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã đơn</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Giá ($)</th>
+                        <th>Thời gian đặt</th>
+                        <th>Tổng giá</th>
+                        <th>Chú thích</th>
+                        <th>Trạng thái</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="table_body">
+                    <!-- <tr>
+                        <td>12233323</td>
+                        <td>le A</td>
+                        <td>12/02/2023</td>
+                        <td>29$</td>
+                        <td>Giao nhanh nhé</td>
+                        <td>Đang xác thực</td>
+                        <td>
+                            <div class="action_col">
+                                <button class="btn btn_sua">Edit</button>
+                                <button class="btn btn_xoa">Delete</button>
+                            </div>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+
+            <!-- phân trang -->
+            <nav aria-label="Page navigation example">
+                <ul id="pagination" class="pagination float-end mx-4">
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                </ul>
+            </nav>
+    </header><br>
+
+    <footer>
+        <p style="text-align: center;;">&copy; 2023 COGO Shop</p>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+
+</html>

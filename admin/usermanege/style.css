@@ -1,0 +1,149 @@
+body {
+    top: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #aedcae;
+}
+
+.UserManagement {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #27c927;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: #105310;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.inputSearch {
+    width: 200px;
+    height: 28px;
+    border-radius: 5px;
+}
+
+.Search {
+    padding: 15px;
+    padding-left: 26%;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #4CAF50;
+    text-align: center;
+    padding: 8px;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+td button {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #0a0404;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input[type="text"],
+input[type="file"],
+input[type="password"] {
+    width: 60%;
+    padding: 8px;
+    border: 1px solid #292323;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.AddNewUser {
+    margin-left: 30%;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.page-item {
+    margin-right: 5px;
+}
+
+.page-link {
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #eee;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.page-link:hover {
+    background-color: #ddd;
+}
+
+.active .page-link {
+    background-color: #333;
+    color: #fff;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo1">
+                <img class="image1" src="../image/logoage.png" alt="">
+                <p class="logoName">CoGo</p>
+            </div>
+            <div class="button1">
+                <button>Hello</button>
+                <button>Introduce</button>
+                <button>Product</button>
+            </div>
+        </div>
+
+        <form>
+            <h3 style="text-align: center;">REGISTER</h3>
+            <div class="mb-3">
+                <label for="username" class="form-label">User name</label>
+                <input type="text" class="form-control" id="username" aria-describedby="username">
+                <div id="usernameError" class="form-text text-danger"></div>
+            </div>
+            <div class="mb-3">
+                <label for="fullName" class="form-label">Fullname</label>
+                <input type="text" class="form-control" id="fullName" aria-describedby="fullName">
+                <div id="fullNameError" class="form-text text-danger"></div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                <div id="emailError" class="form-text text-danger"></div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password">
+                <div id="passError" class="form-text text-danger"></div>
+            </div>
+            <div class="mb-3">
+                <label for="repassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="repassword">
+                <div id="passConfirmError" class="form-text text-danger"></div>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Remember me?</label>
+            </div>
+            <button type="button" onclick="handleLogin()" class="btn btn-primary">
+                Register
+            </button><br>
+            <button class="LoginButton"><a style="text-decoration: none; color: white;" href="../loginpage/login.html">
+                    Login</a>
+            </button>
+        </form>
+    </header>
+
+    <footer>
+        <p style="text-align: center; color: white; font-weight: bold;">&copy; 2023 COGO Shop</p>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

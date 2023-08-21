@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #dfe7df;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #27c927;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: #105310;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    width: 400px;
+    margin-right: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+label {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #4CAF50;
+    color: black;
+}
+
+h1,
+h3 {
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+table {
+    margin-top: 20px;
+}
+
+button {
+    background-color: blue;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #d49999;
+}
+
+textarea {
+    border-radius: 5px;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.page-item {
+    margin-right: 5px;
+}
+
+.page-link {
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #eee;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.page-link:hover {
+    background-color: #ddd;
+}
+
+.active .page-link {
+    background-color: #333;
+    color: #fff;
+}
