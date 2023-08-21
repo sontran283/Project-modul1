@@ -77,9 +77,11 @@ function CheckOut() {
         createAt: new Date(),
     });
     userLogin.cart = [];
-
+    localStorage.setItem("userlogin", JSON.stringify(userLogin))
+    
     localStorage.setItem("carts", JSON.stringify(carts));
     alert("Đơn hàng đã được đặt");
     location.href = "../user/userindex.html";
+    // this.remove()
 }
 

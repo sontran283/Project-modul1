@@ -23,6 +23,12 @@
     z-index: 2;
 }
 
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
 .topnav {
     overflow: hidden;
     background-color: #27c927;
@@ -31,7 +37,6 @@
 .topnav a {
     float: left;
     color: #f2f2f2;
-    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
@@ -223,8 +228,4 @@ img {
 .active .page-link {
     background-color: #333;
     color: #fff;
-}   
-
-.not_click {
-    display: none;
 }

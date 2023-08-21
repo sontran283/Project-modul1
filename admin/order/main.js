@@ -9,11 +9,15 @@
 function showTable() {
     const idUserlogin = JSON.parse(localStorage.getItem("userlogin")) || [];
     const carts = JSON.parse(localStorage.getItem("carts")) || [];
-    const products = JSON.parse(localStorage.getItem("product"))
-
+    const products = JSON.parse(localStorage.getItem("product")) || []
+    console.log('carts', carts)
     let str = ""
     for (let i = 0; i < carts.length; i++) {
+
         let e = carts[i];
+        if (!e.cart) {
+            continue
+        }
 
         let stringTenSP = ""
         let giaSP = ""
@@ -38,13 +42,13 @@ function showTable() {
         <td>${stringTenSP}</td>
         <td>${giaSP}</td>
         <td>${e.createAt}</td>
-        <td>${Number(total).toLocaleString('vi-VN')}$</td>
+        <td>${Number(total).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</td>
         <td>${e.note}</td>
         <td>${e.status}</td>
         <td>
             <div class="action_col">
-                <button class="btn btn_sua" onclick="receive(${e.id})">Recive</button>
-                <button class="btn btn_xoa" onclick="deny(${e.id})">Deny</button>
+                <button class="btn btn_sua${e.status == "Đang chờ xử lý" ? "" : " not_click"}" onclick="receive(${e.id})">Recive</button>
+                <button class="btn btn_xoa${e.status == "Đang chờ xử lý" ? "" : " not_click"}" onclick="deny(${e.id})">Deny</button>
             </div>
         </td>
         </tr>

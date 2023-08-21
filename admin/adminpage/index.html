@@ -27,10 +27,10 @@
                 <h2>Customer Management</h2>
             </div>
             <div class="account">
-                <button style="background-color: rgb(17, 156, 17); width: 80px; height: 30px; border-radius: 5px;">
-                    <span style="text-decoration: none; color: white;" onclick="signOut()">Exit
-                    </span>
-                    <span><i class="fa-solid fa-right-from-bracket"></i></span></button>
+                <button onclick="signOut()"
+                    style="background-color: rgb(17, 156, 17); width: 80px; height: 30px; border-radius: 5px;">
+                    <span class="exit" style="text-decoration: none; color: white;">Exit</span>
+                </button>
             </div>
         </div>
 
@@ -38,12 +38,15 @@
             <div class="container">
                 <a href=""></a>
                 <div class="redirect">
+                    <button class="btn_redirect" onclick="window.location.href = '../catagory/index.html'">Quản lý
+                        danh mục</button>
                     <button class="btn_redirect" onclick="window.location.href = '../order/index.html'">Quản lý đơn
                         hàng</button>
                     <button class="btn_redirect" onclick="window.location.href = '../product/index.html'">Quản lý sản
                         phẩm</button>
                     <button class="btn_redirect" onclick="window.location.href = '../usermanege/index.html'">Quản lý
                         người dùng</button>
+
                 </div>
                 <ul class="category-list">
                     <li><a>Cherry</a></li>

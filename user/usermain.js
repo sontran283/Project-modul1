@@ -9,10 +9,9 @@ const products = JSON.parse(localStorage.getItem("product"))
 function drawProduct(arr = products) {
     let stringHTML_A = ""
     let stringHTML_B = ""
+    let productStr = ''
     arr.forEach(e => {
-        if (e.phanloai == "Loại A") {
-            stringHTML_A +=
-                `
+        productStr += `
             <div class="fruit-card">
                 <img style="width: 300px; height: 200px; object-fit: cover;" src="../admin/image/${e.img}" alt="Fresh pineapple">
                 <h3>${e.name}</h3>
@@ -28,31 +27,46 @@ function drawProduct(arr = products) {
                 </button>
             </div>
                 `
-        } else {
-            stringHTML_B +=
-                `
-            <div class="fruit-card1">
-            <img style="width: 320px; height: 200px; object-fit: cover;"  src="../admin/image/${e.img}" alt="Fresh coconut">
-            <h3>${e.name}</h3>
-            
-            <p style="color: red;">Price:${e.sum}$</p>
-            <p>Dragon are elongated tropical fruits with a sweet taste. They are a great source of potassium and vitamin B6.</p>
-            <button onclick="addToCart(${e.id})">
-                
-                    Add to cart
-                
-            </button>
-            <button onclick="saveInfoProduct(${e.id})">
-                <a style="text-decoration: none;" href="../introduction/detail.html">
-                    Product Details
-                </a>
-            </button>
-            </div>
-                `
-        }
+        // if (e.phanloai == "Loại A") {
+        //     stringHTML_A +=
+        //         `
+        //     <div class="fruit-card">
+        //         <img style="width: 300px; height: 200px; object-fit: cover;" src="../admin/image/${e.img}" alt="Fresh pineapple">
+        //         <h3>${e.name}</h3>
+        //         <p style="color: red;">Price:${e.sum}$</p>
+        //         <p>The Orange is a popular fruit that comes in various colors and flavors. It is rich in fiber and vitamin C.</p>
+        //         <button onclick="addToCart(${e.id})">
+        //                 Add to cart 
+        //         </button>
+        //         <button onclick="saveInfoProduct(${e.id})">
+        //             <a style="text-decoration: none; color: white;" href="../introduction/detail.html">
+        //                 Product Details
+        //             </a>
+        //         </button>
+        //     </div>
+        //         `
+        // } else {
+        //     stringHTML_B +=
+        //         `
+        //     <div class="fruit-card1">
+        //     <img style="width: 320px; height: 200px; object-fit: cover;"  src="../admin/image/${e.img}" alt="Fresh coconut">
+        //     <h3>${e.name}</h3>
+        //     <p style="color: red;">Price:${e.sum}$</p>
+        //     <p>Dragon are elongated tropical fruits with a sweet taste. They are a great source of potassium and vitamin B6.</p>
+        //     <button onclick="addToCart(${e.id})">
+        //             Add to cart
+        //     </button>
+        //     <button onclick="saveInfoProduct(${e.id})">
+        //         <a style="text-decoration: none;" href="../introduction/detail.html">
+        //             Product Details
+        //         </a>
+        //     </button>
+        //     </div>
+        //         `
+        // }
     })
-    document.getElementById("typeA").innerHTML = stringHTML_A
-    document.getElementById("typeB").innerHTML = stringHTML_B
+    document.getElementById("show-product").innerHTML = productStr
+    // document.getElementById("typeB").innerHTML = stringHTML_B
 }
 drawProduct()
 
@@ -161,27 +175,65 @@ document.getElementById("search").addEventListener("keydown", (e) => {
 })
 
 
-let hidenA = document.querySelectorAll(".hidenA")
-let hidenB = document.querySelectorAll(".hidenB")
-function typeAB() {
-    hidenA[0].style.display = "block"
-    hidenA[1].style.display = "flex"
-    hidenB[0].style.display = "block"
-    hidenB[1].style.display = "flex"
-    location.href = "#btnstatus"
+function showType() {
+    const categorys = JSON.parse(localStorage.getItem("categorys"))
+    let stringHTML = `<button class='select-type' id='all' onclick="showProduct()">All</button>`
+    categorys.forEach(e => {
+        stringHTML +=
+            `
+             <button class='select-type' id='${e.id}' onclick="showProduct(${e.id})">${e.name}</button>
+            `
+    })
+    document.getElementById("btnstatus").innerHTML = stringHTML
 }
-function typeAA() {
-    hidenA[0].style.display = "block"
-    hidenA[1].style.display = "flex"
-    hidenB[0].style.display = "none"
-    hidenB[1].style.display = "none"
-    location.href = "#btnstatus"
-}
-function typeBB() {
-    hidenA[0].style.display = "none"
-    hidenA[1].style.display = "none"
-    hidenB[0].style.display = "block"
-    hidenB[1].style.display = "flex"
-    location.href = "#btnstatus"
-}
+showType()
 
+function showProduct(id) {
+    let type = ''
+    const elements = document.getElementsByClassName('select-type')
+    Array.from(elements).forEach(el => el.classList.remove('active'))
+    if (id) {
+        const currentType = JSON.parse(localStorage.getItem("categorys")).find(el => el.id === id)
+        if (!currentType) {
+            return
+        }
+        type = currentType.name
+        document.getElementById(id).classList.add('active')
+    } else {
+        document.getElementById('all').classList.add('active')
+    }
+
+    const products = JSON.parse(localStorage.getItem("product"))
+    let data
+    if (type === '') {
+        data = products
+    } else {
+        data = products.filter(e => e.phanloai.includes(type))
+    }
+
+    let stringHTML = "No Record"
+    if (data.length > 0) {
+        stringHTML = ''
+        data.forEach(e => {
+            stringHTML +=
+                `
+            <div class="fruit-card">
+                <img style="width: 300px; height: 200px; object-fit: cover;" src="../admin/image/${e.img}" alt="Fresh pineapple">
+                <h3>${e.name}</h3>
+                <p style="color: red;">Price:${e.sum}$</p>
+
+                <p>The Orange is a popular fruit that comes in various colors and flavors. It is rich in fiber and vitamin C.</p>
+                <button onclick="addToCart(${e.id})">
+                        Add to cart 
+                </button>
+                <button onclick="saveInfoProduct(${e.id})">
+                    <a style="text-decoration: none; color: white;" href="../introduction/detail.html">
+                        Product Details
+                    </a>
+                </button>
+            </div>`
+        })
+    }
+
+    document.getElementById("show-product").innerHTML = stringHTML
+}

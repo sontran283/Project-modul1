@@ -144,13 +144,30 @@ function deleteProduct(id) {
 }
 
 
+function drawCategory() {
+    const categorys = JSON.parse(localStorage.getItem("categorys"))
+    let stringHTML = ""
+
+    categorys.forEach(e => {
+        stringHTML +=
+            `
+            <option value="${e.name}">${e.name}</option>
+            
+            `
+    })
+
+    document.getElementById("phanloai").innerHTML = stringHTML
+}
+drawCategory()
+
+
 function checkSearch() {
     currentPage = 1
     let text = document.getElementById("search").value;
     const list = JSON.parse(localStorage.getItem('product'))
     let foundProduct = list.filter(pro => pro.name.toLowerCase().includes(text.trim().toLowerCase()));
     console.log(foundProduct);
-    
+
     SEARCH_DATA = foundProduct
     renderPagination()
     Table()

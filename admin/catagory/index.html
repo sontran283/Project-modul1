@@ -4,24 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Management</title>
+    <title>Document</title>
 
     <link rel="stylesheet" href="./style.css">
+</head>
 
 <body>
     <header>
-        <div class="topnav1">
+        <div class="topnav1" style="align-items: center;">
             <div class="topnav">
                 <a style="background-color: rgb(75, 136, 14);" href="../adminpage/index.html">Admin Home</a>
-                <a href="../catagory/index.html">Danh Mục</a>
+                <a style="color: red;" href="./index.html">Danh Mục</a>
                 <a href="../order/index.html">Đơn Hàng</a>
-                <a style="color: red;" href="../product/index.html">Sản Phẩm</a>
+                <a href="../product/index.html">Sản Phẩm</a>
                 <a href="../usermanege/index.html">Người Dùng</a>
             </div>
         </div><br>
 
         <div class="container">
-            <h1>Quản Lý Sản Phẩm</h1>
+            <h1>Quản Lý Danh Mục</h1>
             <hr>
             <div class="search_add_scope">
                 <div>
@@ -39,11 +40,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Tên sản phẩm</th>
-                        <th>Ảnh</th>
-                        <th>Đơn giá</th>
-                        <th>Phân loại</th>
-                        <th>Số lượng</th>
-                        <th>Thời gian cập nhật</th>
+                        <th>Chú thích</th>
                         <th>Hành động</th>
                     </tr>
                 </thead>
@@ -52,14 +49,10 @@
                         <td>1</td>
                         <td>san pham 1</td>
                         <td><img src="../image/banners-1.png" alt=""></td>
-                        <td>120.000vnd</td>
                         <td>loai A</td>
-                        <td>28/05/2023</td>
-                        <td>28/06/2023</td>
                         <td>
                             <div class="action_col">
                                 <button class="btn btn_sua">Edit</button>
-                                <button class="btn btn_xoa">Delete</button>
                             </div>
                         </td>
                     </tr> -->
@@ -68,60 +61,37 @@
 
             <div id="form_scope" class="hide">
                 <form id="form" action="">
-                    <h3>Thông tin sản phẩm</h3>
+                    <h3>Thông tin danh muc</h3>
                     <div>
                         <label for="name">Tên sản phẩm:</label>
-                        <input id="name" type="text" placeholder="">
+                        <input type="text" id="nameDes">
                     </div>
                     <div>
-                        <label for="image">ảnh:</label>
-                        <input id="image" type="file" required>
+                        <label for="note">Chú thích:</label>
+                        <textarea id="note" name="" cols="50" rows="2"></textarea>
                     </div>
-                    <div>
-                        <label for="count">Tổng giá:</label>
-                        <input id="sum" type="number" name="count" placeholder="" min="1">
-                    </div>
-                    <div>
-                        <label for="">Phân loại:</label>
-                        <select id="phanloai">
-                            <!-- <option value="Loại A">Loại A</option>
-                            <option value="Loại B">Loại B</option> -->
-                        </select>
-                    </div>
-                    <div>
-                        <label for="time">Số lượng:</label>
-                        <input id="time" type="number" name="">
-                    </div>
-                    <div>
-                        <label for="price">Thời gian cập nhật:</label>
-                        <input id="date" type="datetime-local" name="">
-                    </div>
+
                     <div class="btn_them_spoce">
                         <button class="btn btn_xoa" type="button" onclick="toggleForm()">Hủy</button>
-                        <button class="btn btn_them" type="submit">Lưu</button>
+                        <button class="btn btn_them" type="submit" >Lưu</button>
                     </div>
                 </form>
             </div>
         </div>
 
 
-        <nav aria-label="Page navigation example">
+        <!-- <nav aria-label="Page navigation example">
             <ul id="pagination" class="pagination float-end mx-4">
                 <li class="page-item"><a class="page-link" href="#">1</a></li>
                 <li class="page-item"><a class="page-link" href="#">2</a></li>
                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                 <li class="page-item"><a class="page-link" href="#">4</a></li>
             </ul>
-        </nav>
+        </nav> -->
 
     </header><br>
 
-    <footer>
-        <p style="text-align: center;;">&copy; 2023 COGO Shop</p>
-    </footer>
-
     <script src="./main.js"></script>
-
 </body>
 
 </html>

@@ -63,7 +63,6 @@ function toggleForm(id) {
     }
 }
 
-
 document.getElementById("form").addEventListener("submit", function (e) {
     e.preventDefault()
     const data = JSON.parse(localStorage.getItem("users")) || []
