@@ -51,8 +51,8 @@ function toggleForm(id) {
         const indexUpdate = data.findIndex(e => e.id == id)
         indexUpdateGlobal = indexUpdate
         inputName.value = data[indexUpdate].name
-        // inputGmail.value = data[indexUpdate].email
-        document.getElementById("container-email").style.display = 'none'
+        inputGmail.value = data[indexUpdate].email
+        // document.getElementById("container-email").style.display = 'none'
         inputHoname.value = data[indexUpdate].honame
         inputphanLoai.value = data[indexUpdate].phanloai
         document.getElementById('container-pass').style.display = 'none'
@@ -62,7 +62,7 @@ function toggleForm(id) {
     } else {
         indexUpdateGlobal = null
         document.getElementById("form").reset()
-        document.getElementById("container-email").style.display = 'block'
+        // document.getElementById("container-email").style.display = 'block'
         document.getElementById('container-pass').style.display = 'block'
         document.getElementById('name').removeAttribute('disabled')
     }
