@@ -224,3 +224,10 @@ img {
     background-color: #333;
     color: #fff;
 }
+
+#pagination>li>a:hover {
+    cursor: pointer;
+    border: none;
+    background-color: rgb(128, 255, 0);
+    box-shadow: 1px 1px 3px 0px #333;
+}

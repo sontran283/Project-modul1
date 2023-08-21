@@ -14,7 +14,7 @@ const inputGmail = document.getElementById("email")
 const inputHoname = document.getElementById("honame")
 const inputphanLoai = document.getElementById("phanloai")
 const inputtime = document.getElementById("time")
-const inputdatetime = document.getElementById("datetime")
+// const inputdatetime = document.getElementById("datetime")
 
 
 function Table(c = data) {
@@ -27,14 +27,12 @@ function Table(c = data) {
         <td>${e.id}</td>
         <td>${e.name}</td>
         <td>${e.email}</td>
-        <td>${e.honame}</td>
         <td>${e.phanloai}</td>
         <td>${e.time}</td>
         <td>${e.datetime}</td>
         <td>
             <div class="action_col">
                 <button class="btn btn_sua" onclick="toggleForm(${e.id})">Sửa</button>
-                <button class="btn btn_xoa" onclick="deleteProduct(${e.id})">Xóa</button>
             </div>
         </td>
     </tr>
@@ -46,20 +44,27 @@ Table()
 
 
 function toggleForm(id) {
+    console.log('toggleForm', id)
     const data = JSON.parse(localStorage.getItem("users")) || []
     document.getElementById("form_scope").classList.toggle("hide")
     if (id != undefined) {
         const indexUpdate = data.findIndex(e => e.id == id)
         indexUpdateGlobal = indexUpdate
         inputName.value = data[indexUpdate].name
-        inputGmail.value = data[indexUpdate].email
+        // inputGmail.value = data[indexUpdate].email
+        document.getElementById("container-email").style.display = 'none'
         inputHoname.value = data[indexUpdate].honame
         inputphanLoai.value = data[indexUpdate].phanloai
-        inputtime.value = data[indexUpdate].time
-        inputdatetime.value = data[indexUpdate].datetime
+        document.getElementById('container-pass').style.display = 'none'
+        document.getElementById('name').setAttribute('disabled', true)
+        // inputtime.value = data[indexUpdate].time
+        // inputdatetime.value = data[indexUpdate].datetime
     } else {
         indexUpdateGlobal = null
         document.getElementById("form").reset()
+        document.getElementById("container-email").style.display = 'block'
+        document.getElementById('container-pass').style.display = 'block'
+        document.getElementById('name').removeAttribute('disabled')
     }
 }
 
@@ -71,8 +76,8 @@ document.getElementById("form").addEventListener("submit", function (e) {
         data[indexUpdateGlobal].email = inputGmail.value
         data[indexUpdateGlobal].honame = inputHoname.value
         data[indexUpdateGlobal].phanloai = inputphanLoai.value
-        data[indexUpdateGlobal].time = inputtime.value
-        data[indexUpdateGlobal].datetime = datetime.value
+        // data[indexUpdateGlobal].time = inputtime.value
+        data[indexUpdateGlobal].datetime = new Date()
         indexUpdateGlobal = null
         this.reset()
         toggleForm()
@@ -88,8 +93,8 @@ document.getElementById("form").addEventListener("submit", function (e) {
         email: inputGmail.value,
         honame: inputHoname.value,
         phanloai: inputphanLoai.value,
-        time: inputtime.value,
-        datetime: inputdatetime.value
+        time: new Date(),
+        datetime: new Date()
     }
     data.push(product)
     localStorage.setItem("users", JSON.stringify(data))
@@ -107,6 +112,10 @@ function deleteProduct(id) {
     if (result) {
         data.splice(indexDelete, 1)
     }
+    // if (id == 0) {
+    //     alert('không sửa được')
+    //     return
+    // }
     localStorage.setItem("users", JSON.stringify(data))
     Table()
     location.reload();

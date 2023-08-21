@@ -14,7 +14,6 @@ function showInfo() {
 showInfo()
 
 let idProductDetail = JSON.parse(localStorage.getItem("id_product_detail"))
-
 function addToCart() {
 
     const userLogin = JSON.parse(localStorage.getItem("userlogin"))
@@ -29,7 +28,7 @@ function addToCart() {
             quantity: 1
         })
 
-        console.log("==>", userLogin.cart);
+        // console.log("==>", userLogin.cart);
         localStorage.setItem("userlogin", JSON.stringify(userLogin))
         alert("Oke !")
     }

@@ -7,8 +7,8 @@ const products = JSON.parse(localStorage.getItem("product"))
 
 
 function drawProduct(arr = products) {
-    let stringHTML_A = ""
-    let stringHTML_B = ""
+    // let stringHTML_A = ""
+    // let stringHTML_B = ""
     let productStr = ''
     arr.forEach(e => {
         productStr += `
@@ -73,8 +73,9 @@ drawProduct()
 
 function addToCart(id) {
     const userLogin = JSON.parse(localStorage.getItem("userlogin"))
-    const users = JSON.parse(localStorage.getItem("users"))
-
+    if (!userLogin.cart) {
+        userLogin.cart = []
+    }
     const checkIndex = userLogin.cart.findIndex(e => e.idProduct == id)
 
     if (checkIndex != -1) {
@@ -85,7 +86,7 @@ function addToCart(id) {
             quantity: 1
         })
 
-        console.log("==>", userLogin.cart);
+        // console.log("==>", userLogin.cart);
         localStorage.setItem("userlogin", JSON.stringify(userLogin))
         alert("Đã thêm, vui lòng kiểm tra giỏ hàng!")
     }

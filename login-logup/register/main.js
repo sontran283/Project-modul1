@@ -7,7 +7,7 @@ const handleLogin = () => {
     let passwordConfirm = document.getElementById('repassword').value;
 
 
-    if (username.trim() === "") {  
+    if (username.trim() === "") {
         document.getElementById("usernameError").innerText = "Không được để trống";
         return;
     } else if (users.findIndex((value) => value.username === username) > -1) {
@@ -18,7 +18,7 @@ const handleLogin = () => {
     }
 
 
-    if (fullName.trim() === "") {  
+    if (fullName.trim() === "") {
         document.getElementById("fullNameError").innerText = "Không được để trống";
         return;
     } else {
@@ -26,10 +26,10 @@ const handleLogin = () => {
     }
 
 
-    if (email.trim() === "") {  
+    if (email.trim() === "") {
         document.getElementById("emailError").innerText = "Không được để trống";
         return;
-    } else if (!validateEmail(email)) { 
+    } else if (!validateEmail(email)) {
         document.getElementById("emailError").innerText = "Không đúng định dạng email";
         return;
     } else {
@@ -37,7 +37,7 @@ const handleLogin = () => {
     }
 
 
-    if (password.trim() === "") { 
+    if (password.trim() === "") {
         document.getElementById("passError").innerText = "Không được để trống";
         return;
     } else if (!validatePassword(password)) {
@@ -48,7 +48,7 @@ const handleLogin = () => {
     }
 
 
-    if (password !== passwordConfirm) {  
+    if (password !== passwordConfirm) {
         document.getElementById("passConfirmError").innerText = "Mật khẩu không trùng khớp";
         return;
     }
@@ -66,7 +66,7 @@ const handleLogin = () => {
         datetime: "2023-08-15T06:59",
         cart: []
     }
-    users = [...users, newUser]; 
+    users = [...users, newUser];
     localStorage.setItem("users", JSON.stringify(users));
 
 

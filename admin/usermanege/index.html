@@ -40,7 +40,7 @@
                         <th>id</th>
                         <th>Tên đăng nhập</th>
                         <th>Email</th>
-                        <th>Mật khẩu</th>
+                        <!-- <th>Mật khẩu</th> -->
                         <th>Vai trò</th>
                         <th>Thời gian tạo</th>
                         <th>Thời gian cập nhật</th>
@@ -70,16 +70,16 @@
                     <h3>Thông tin người dùng</h3>
                     <div>
                         <label for="name">Tên đăng nhập:</label>
-                        <input id="name" disabled type="text" placeholder="">
+                        <input style="width: 70%;" id="name" type="text" placeholder="">
                     </div>
-                    <div>
+                    <div id="container-email">
                         <label for="email">Email:</label>
                         <input type="email" name="count" id="email" placeholder="">
                     </div>
-                    <!-- <div>
+                    <div id="container-pass">
                         <label for="honame">Mật khẩu:</label>
-                        <input type="text" name="" id="honame">
-                    </div> -->
+                        <input style="width: 70%;" type="password" name="" id="honame">
+                    </div>
                     <div>
                         <label for="">Vai trò:</label>
                         <select id="phanloai">
@@ -91,10 +91,10 @@
                         <label for="time">Thời gian tạo:</label>
                         <input type="time" name="" id="time" value="time">
                     </div> -->
-                    <div>
+                    <!-- <div>
                         <label for="datetime">Thời gian cập nhật:</label>
-                        <input type="datetime-local" name="" id="datetime" value="datetime">
-                    </div>
+                        <input type="datetime-local" name="" id="datetime" value="datetime" disabled>
+                    </div> -->
                     <div class="btn_them_spoce">
                         <button class="btn btn_xoa" type="button" onclick="toggleForm()">Hủy</button>
                         <button class="btn btn_them" type="submit">Lưu</button>

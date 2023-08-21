@@ -143,7 +143,6 @@ function deleteProduct(id) {
     Table()
 }
 
-
 function drawCategory() {
     const categorys = JSON.parse(localStorage.getItem("categorys"))
     let stringHTML = ""

@@ -311,43 +311,6 @@ body {
     background-color: rgb(0, 255, 51);
 }
 
-@keyframes tytyA {
-    0% {
-        color: red;
-    }
-
-    50% {
-        color: yellow;
-    }
-
-    100% {
-        color: blue;
-    }
-}
-
-.tytyA {
-    animation: tytyA 1s infinite;
-}
-
-
-@keyframes tytyB {
-    0% {
-        color: red;
-    }
-
-    50% {
-        color: yellow;
-    }
-
-    100% {
-        color: blue;
-    }
-}
-
-.tytyB {
-    animation: tytyB 1s infinite;
-}
-
 
 h1 {
     color: #333;
@@ -647,7 +610,6 @@ footer {
 
 .active {
     border-radius: 5px;
-    background-color: red;
+    background-color: greenyellow;
     color: white
-    
 }
